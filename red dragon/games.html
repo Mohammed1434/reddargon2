@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Games - Red Dragon</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .game-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .game-card {
+      width: 180px;
+      background-color: #1a1a1a;
+      border: 1px solid #400000;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(139, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .game-card h3 {
+      font-size: 14px;
+      color: #ffdddd;
+      margin: 10px 0;
+    }
+
+    .game-card a {
+      color: #ff4444;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header> you're very close ... </header>
+
+  <main class="games">
+    <h2>Library</h2>
+    <div class="game-list">
+      <div class="game-card">
+        <img src="assets/game1.jfif" alt="Elden Ring: Nightreign" />
+        <h3>Elden Ring: Nightreign</h3>
+        <p class="game-description">Explore the dark realms in this epic fantasy RPG. Engage in battle, conquer bosses, and uncover lost lore.</p>
+         <a href="game-detail.html">View Game</a>
+      </div>
+
+      <div class="game-card">
+        <img src="assets/capsule_616x353.jpg" alt="FC 25" class="game-image">
+        <h3 class="game-title">FC 25</h3>
+        <p class="game-description">
+          Experience the thrill of the pitch with FC 25, featuring enhanced graphics and realistic gameplay.
+        </p>
+        <a href="downloads/fc25.zip" class="download-button">View Game</a>
+      </div>
+
+      <div class="game-card">
+        <img src="assets/residentevil4.jpg" alt="Resident Evil 4 Remake">
+        <h3>Resident Evil 4 Remake</h3>
+        <p class="game-description">control the special agent Leon S. Kennedy on a mission to rescue the US president's daughter, Ashley Graham </p>
+        <a href="downloads/resident-evil-4.zip">View Game</a>
+    
+      </div>
+
+      <div class="game-card">
+        <img src="assets/indana.jpg" alt="Indiana Jones">
+        <h3>Indiana Jones</h3>
+        <p class="game-description">Indiana Jones and the Great Circle is a 2024 action-adventure game developed by MachineGames and published by Bethesda Softworks.  </p>
+        <a href="downloads/indiana-jones.zip">View Game</a>
+      </div>
+
+      <div class="game-card">
+        <img src="assets/detroid.jpg" alt="Detroit Become Human">
+        <h3>Detroit: Become Human</h3>
+        <p class="game-description">puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent ...</p>
+        <a href="downloads/detroit.zip">View Game</a>
+      </div>
+
+      <div class="game-card">
+        <img src="assets/hogwartslegacy.jpg" alt="Hogwarts Legacy">
+        <h3>Hogwarts Legacy</h3>
+        <p class="game-description">Experience the wizarding world in an unexplored era to uncover a hidden truth from its past. Battle against trolls, Dark Wizards, goblins, and more
+ </p>
+        <a href="downloads/hogwarts-legacy.zip">View Game</a>
+      </div>
+
+      <div class="game-card">
+        <img src="assets/cyber.png" alt="Cyberpunk 2077">
+        <h3>Cyberpunk 2077</h3>
+        <p class="game-description">Enter the world of Cyberpunk 2077 — a storydriven, open world RPG of the dark future from CD PROJEKT RED, creators of The Witcher series of games. </p>
+        <a href="downloads/cyberpunk.zip">View Game</a>
+      </div>
+    </div>
+  </main>
+
+  <footer> ... </footer>
+</body>
+</html>

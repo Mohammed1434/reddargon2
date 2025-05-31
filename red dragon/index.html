@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Red Dragon | Free Games for Everyone</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Red Dragon Logo">
+      <h1>Red Dragon</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="#">About</a></li>
+        <div class="search-wrapper">
+  <input type="text" id="searchInput" placeholder="Search games..." autocomplete="off">
+  <ul id="searchResults" class="results-dropdown"></ul>
+</div>
+
+
+      </ul>
+    </nav>
+  </header>
+    <h2>STORE</h2>
+    <div class="game-list" id="gameList">
+      <div class="game-card" data-title="Elden Ring Nightreign">
+        <img src="assets/game1.jfif" alt="Elden Ring Nightreign" />
+        <h3>Elden Ring: Nightreign</h3>
+        <p>Epic fantasy RPG adventure awaits.</p>
+        <a href="game-detail.html">View Game</a>
+      </div>
+
+      <!-- You can add more game cards like this -->
+      <div class="game-card" data-title="fc 25">
+        <img src="assets/capsule_616x353.jpg" alt="FC 25" />
+        <h3>FC 25</h3>
+        <p>sports create your ultimate team now.</p>
+        <a href="#">View Game</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Red Dragon. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Search Filter
+    document.getElementById('gameSearch').addEventListener('input', function () {
+      const search = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.game-card');
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        card.style.display = title.includes(search) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+ <script>
+  const games = [
+    { title: "Elden Ring: Nightreign", link: "downloads/elden-ring.zip" },
+    { title: "FC 25", link: "downloads/fc25.zip" },
+    { title: "Resident Evil 4 Remake", link: "downloads/resident-evil-4.zip" },
+{ title: "Indiana Jones", link: "downloads/indiana-jones.zip" },
+{ title: "Detroit: Become Human", link: "downloads/detroit.zip" },
+{ title: "Hogwarts Legacy", link: "downloads/hogwarts-legacy.zip" },
+{ title: "Cyberpunk 2077", link: "downloads/cyberpunk.zip" },
+    // Add more games as needed
+  ];
+
+  const searchInput = document.getElementById("searchInput");
+  const resultsList = document.getElementById("searchResults");
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    resultsList.innerHTML = "";
+
+    if (query.trim() === "") {
+      resultsList.style.display = "none";
+      return;
+    }
+
+    const filteredGames = games.filter(game =>
+      game.title.toLowerCase().includes(query)
+    );
+
+    if (filteredGames.length === 0) {
+      resultsList.style.display = "none";
+      return;
+    }
+
+    filteredGames.forEach(game => {
+      const li = document.createElement("li");
+      li.textContent = game.title;
+      li.onclick = () => window.location.href = game.link;
+      resultsList.appendChild(li);
+    });
+
+    resultsList.style.display = "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!document.querySelector(".search-wrapper").contains(e.target)) {
+      resultsList.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
